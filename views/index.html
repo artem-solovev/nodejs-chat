@@ -151,10 +151,12 @@
         <script>
             var socket = io();
 
+            var nickname = null;
+
             window.onload = function() {
                 openNav();
 
-                var nickname = null;
+
 
                 while ( nickname == null ) {
                     nickname = prompt( "What is your nickname?", "" );
@@ -163,6 +165,7 @@
                 socket.emit( "user nickname", nickname );
                 $( "#username" ).text( "Hello " + nickname );
             };
+
 
             $( "form" ).submit( function() {
                 socket.emit( "chat message", $( "#messageForm" ).val() );
