@@ -12,7 +12,7 @@ npm install
 ```
 
 ```
-npde index.js
+nоde index.js
 ```
 
 ### Prerequisities
