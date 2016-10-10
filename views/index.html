@@ -2,6 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="description" content="Simple chat based on Node.js" >
+        <meta name="author" content="Artem Solovev - artem.solovev.lse@gmail.com" >
+
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
@@ -143,6 +146,11 @@
                 document.getElementById("mySidenav").style.width = "0";
                 document.getElementById("main").style.marginLeft= "0";
             }
+        </script>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io();
         </script>
 
     </body>
