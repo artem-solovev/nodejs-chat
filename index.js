@@ -14,18 +14,31 @@ app.get( "/", function( request, response ) {
 } );
 
 io.on( "connection", function( socket ){
-    console.log( "User is logged in" );
 
-    socket.broadcast.emit( 'New user logged in' );
+    var username = "";
+
+    socket.on( "user nickname", function( nickname ) {
+        socket.broadcast.emit( "user nickname", nickname );
+        setName( nickname );
+    } );
 
     socket.on( "chat message", function( msg ) {
-        io.emit( 'chat message', msg );
-        console.log( "Message: " + msg );
+        io.emit( "chat message", username + ": " +msg );
     } );
 
     socket.on( "disconnect", function() {
-        console.log( "User is logged out" );
+        socket.broadcast.emit( "user logout", getName() );
     } );
+
+
+    function getName() {
+        return username;
+    }
+
+    function setName( name ) {
+        username = name;
+    }
+
 });
 
 http.listen( port, function() {

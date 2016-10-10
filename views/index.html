@@ -110,6 +110,7 @@
 
         <div id="main">
             <h2>Messages</h2>
+            <h3 id="username"></h3>
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; show / hide users</span>
 
             <ul id="messages"></ul>
@@ -133,9 +134,7 @@
 
         <script type="text/javascript">
 
-            window.onload = function() {
-                openNav();
-            };
+
 
             function openNav() {
                 document.getElementById("mySidenav").style.width = "250px";
@@ -152,6 +151,19 @@
         <script>
             var socket = io();
 
+            window.onload = function() {
+                openNav();
+
+                var nickname = null;
+
+                while ( nickname == null ) {
+                    nickname = prompt( "What is your nickname?", "" );
+                }
+
+                socket.emit( "user nickname", nickname );
+                $( "#username" ).text( "Hello " + nickname );
+            };
+
             $( "form" ).submit( function() {
                 socket.emit( "chat message", $( "#messageForm" ).val() );
                 $( "#messageForm" ).val( "" );
@@ -159,9 +171,18 @@
                 return false;
             } );
 
+            socket.on( "user nickname", function( nickname ) {
+                $( "#messages" ).append( $( "<li>" ).css( "font-weight", "700" ).text( nickname + " joined us" )  );
+            } );
+
             socket.on( "chat message", function( msg ) {
                 $( "#messages" ).append( $( "<li>" ).text( msg )  );
             } );
+
+            socket.on( "user logout", function( nickname ) {
+                $( "#messages" ).append( $( "<li>" ).css( "font-weight", "700" ).text( nickname + " left us" )  );
+            } );
+
         </script>
 
     </body>
