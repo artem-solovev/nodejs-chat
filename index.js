@@ -7,7 +7,7 @@ var http = require( "http" ).Server( app );
 
 
 app.get( "/", function( request, response ) {
-    response.send( "Chat" );
+    response.sendFile( __dirname + "/views/index.html" );
 } );
 
 http.listen( port, function() {
