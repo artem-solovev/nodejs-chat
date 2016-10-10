@@ -16,6 +16,10 @@ app.get( "/", function( request, response ) {
 io.on( "connection", function( socket ){
     console.log( "User is logged in" );
 
+    socket.on( "chat message", function( msg ) {
+        console.log( "Message: " + msg );
+    } );
+
     socket.on( "disconnect", function() {
         console.log( "User is logged out" );
     } );

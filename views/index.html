@@ -115,7 +115,7 @@
             <ul id="messages"></ul>
             <form action="">
                 <div class="input-group input-group-lg">
-                    <input autocomplete="off" class="form-control messageForm" />
+                    <input id="messageForm" autocomplete="off" class="form-control messageForm" />
                     <span class="input-group-btn">
                         <button class="btn btn-primary btn-lg sendMessage">Send</button>
                     </span>
@@ -151,6 +151,13 @@
         <script src="/socket.io/socket.io.js"></script>
         <script>
             var socket = io();
+
+            $( "form" ).submit( function() {
+                socket.emit( "chat message", $( "#messageForm" ).val() );
+                $( "#messageForm" ).val( "" );
+
+                return false;
+            } );
         </script>
 
     </body>
