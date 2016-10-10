@@ -16,7 +16,10 @@ app.get( "/", function( request, response ) {
 io.on( "connection", function( socket ){
     console.log( "User is logged in" );
 
+    socket.broadcast.emit( 'New user logged in' );
+
     socket.on( "chat message", function( msg ) {
+        io.emit( 'chat message', msg );
         console.log( "Message: " + msg );
     } );
 
