@@ -6,7 +6,7 @@ var app = express();
 var http = require( "http" ).Server( app );
 var io = require( "socket.io" )( http );
 
-
+app.use( express.static( __dirname ) );
 
 
 app.get( "/", function( request, response ) {
@@ -30,6 +30,9 @@ io.on( "connection", function( socket ){
         socket.broadcast.emit( "user logout", getName() );
     } );
 
+    function newMessage( msg ) {
+        console.log( username + " --> " + msg );
+    }
 
     function getName() {
         return username;

@@ -180,6 +180,8 @@
 
             socket.on( "chat message", function( msg ) {
                 $( "#messages" ).append( $( "<li>" ).text( msg )  );
+                var audio = new Audio( "assets/sounds/message.mp3" );
+                audio.play();
             } );
 
             socket.on( "user logout", function( nickname ) {
