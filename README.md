@@ -1,6 +1,6 @@
 <p align="center">
-<a href="https://david-dm.org/alanshaw/david-www"><img src="https://david-dm.org/artem-solovev/nodejs-chat.svg" alt="Dependency Status"></a>
-<a href="https://david-dm.org/alanshaw/david-www/?type=dev"><img src="https://david-dm.org/artem-solovev/nodejs-chat/dev-status.svg" alt="devDependency Status"></a>
+<a href="https://david-dm.org/artem-solovev/nodejs-chat"><img src="https://david-dm.org/artem-solovev/nodejs-chat.svg" alt="Dependency Status"></a>
+<a href="https://david-dm.org/artem-solovev/nodejs-chat/?type=dev"><img src="https://david-dm.org/artem-solovev/nodejs-chat/dev-status.svg" alt="devDependency Status"></a>
 </p>
 ___
 
