@@ -1,4 +1,7 @@
-https://david-dm.org/artem-solovev/nodejs-chat.svg
+<p align="center">
+<a href="https://david-dm.org/alanshaw/david-www"><img src="https://david-dm.org/artem-solovev/nodejs-chat.svg" alt="Dependency Status"></a>
+</p>
+___
 
 # Node.js chat
 
