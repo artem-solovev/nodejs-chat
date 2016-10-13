@@ -1,3 +1,5 @@
+https://david-dm.org/artem-solovev/nodejs-chat.svg
+
 # Node.js chat
 
 It's very simple chat based on Node.js
