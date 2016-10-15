@@ -36,9 +36,20 @@ socket.on( "user logout", function( nickname ) {
 function getName() {
     var userName = null;
 
-    while ( userName === null || userName === "" ) {
+    while ( userName === null || isEmptyString( userName )) {
         userName = prompt( "What is your nickname?", "" );
     }
 
     return userName.toString();
+}
+
+
+/*
+Checks a string for an empty value
+
+@param ? str
+@return boolean
+*/
+function isEmptyString( str ) {
+    return str === "" ? true  : false ;
 }
