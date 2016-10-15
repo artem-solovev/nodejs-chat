@@ -33,6 +33,12 @@ socket.on( "user logout", function( nickname ) {
     $( "#messages" ).append( $( "<li>" ).css( "font-weight", "700" ).text( nickname + " left us" )  );
 } );
 
+
+/*
+Gets userName
+
+@return string - user name
+*/
 function getName() {
     var userName = null;
 
