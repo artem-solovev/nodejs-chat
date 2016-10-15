@@ -1,28 +1,32 @@
 {
-    "name": "nodejs-chat",
-    "version": "0.0.1",
-    "author": "Artem Solovev",
-    "description": "Chat based on node.js",
-    "license": "GNU General Public License Version 3",
-    "scripts": {
-        "test": "node_modules/karma/bin/karma start karma.conf.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/artem-solovev/nodejs-chat.git"
-    },
-    "devDependencies": {
-        "jasmine-core": "~2.2.0",
-        "karma": "~1.3.0",
-        "karma-chrome-launcher": "~2.0.0",
-        "karma-jasmine": "~1.0.2"
-    },
-    "dependencies": {
-        "express": "~4.14.0",
-        "ejs": "~2.5.2",
-        "socket.io": "~1.5.0"
-    },
-    "bugs": {
-        "url": "https://github.com/artem-solovev/nodejs-chat/issues"
-    }
+  "name": "nodejs-chat",
+  "version": "0.0.1",
+  "author": "Artem Solovev",
+  "description": "Chat based on node.js",
+  "license": "GNU General Public License Version 3",
+  "scripts": {
+    "test": "node_modules/karma/bin/karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artem-solovev/nodejs-chat.git"
+  },
+  "devDependencies": {
+    "jasmine-core": "~2.2.0",
+    "karma": "~1.3.0",
+    "karma-chrome-launcher": "~2.0.0",
+    "karma-jasmine": "~1.0.2",
+    "requirejs": "~2.3.2",
+    "karma-requirejs": "~1.1.0",
+    "karma-firefox-launcher": "~1.0.0",
+    "karma-opera-launcher": "~1.0.0"
+  },
+  "dependencies": {
+    "express": "~4.14.0",
+    "ejs": "~2.5.2",
+    "socket.io": "~1.5.0"
+  },
+  "bugs": {
+    "url": "https://github.com/artem-solovev/nodejs-chat/issues"
+  }
 }
