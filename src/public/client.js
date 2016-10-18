@@ -59,3 +59,6 @@ Checks a string for an empty value
 function isEmptyString( str ) {
     return str === "" ? true  : false ;
 }
+
+module.exports.isemptystring = isEmptyString;
+module.exports.getname = getName;
